@@ -1,9 +1,9 @@
-# CSC458
-
 ## **Computer Networking Systems**
 
 **Note**: These are the assignments that I completed in this course. That means the skeleton of the project was given to us by the instructor and I worked on completing the required tasks.
 In this course, we created a simple router and went over the lower level operations that it should be able to do in detail. We also simulated the bufferbloat problem and did some network measurements. The description of each assignment’s tasks can be viewed in a pdf in this repo.
+
+As the starter codes of the assignments of this course are the instructor's property, I have removed most of the implementations from the files. That means this public repo is only an extremely *partial* view of the implementations. Please request to view the complete impelmentation on my private repo.
 
 The following is each of these assignments in detail.
 
@@ -14,9 +14,9 @@ In assignment 1, I wrote a simple router with a static routing table by using *n
 The router routes packets from an emulated `host` (client) to two emulated application `servers` (HTTP Server 1 and 2) sitting behind the router. The application servers are each running an HTTP server. The router is able to connect the client to these servers using regular client software. Particularly, as a functioning Internet router, it enables us to **`ping`** and **`traceroute`** each of these emulated nodes.
 All of the implementations for this assignment is done in the `router` folder, and all other files are for setup purposes.
 
-&nbsp;
-
-<kbd><img src="/A1/simple_router.png" style="width:600px;height:400px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/simple_router.png" style="width:600px;height:400px;"></kbd>
+</p>
 
 The picture is from the assignment's handout [*here*](/A1/A1.pdf).
 
@@ -127,45 +127,69 @@ The results of running these commands on our router are as follow:
 
 - Pinging from the client to any of the router's interfaces (`192.168.2.1`, `172.64.3.1`, `10.0.1.1`).
 
-<kbd><img src="/A1/ping/client_ping_router_interface1.png" style="width:400px;height:150px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/ping/client_ping_router_interface1.png" style="width:400px;height:150px;"></kbd>
+</p>
 
-<kbd><img src="/A1/ping/client_ping_router_interface2.png" style="width:400px;height:150px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/ping/client_ping_router_interface2.png" style="width:400px;height:150px;"></kbd>
+</p>
 
-<kbd><img src="/A1/ping/client_ping_router_interface3.png" style="width:400px;height:150px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/ping/client_ping_router_interface3.png" style="width:400px;height:150px;"></kbd>
+</p>
 
 &nbsp;
 
 - Tracerouting from the client to any of the router's interfaces.
 
-<kbd><img src="/A1/traceroute/client_traceroute_router_interface1.png" style="width:500px;height:50px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/traceroute/client_traceroute_router_interface1.png" style="width:500px;height:50px;"></kbd>
+</p>
 
-<kbd><img src="/A1/traceroute/client_traceroute_router_interface2.png" style="width:500px;height:50px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/traceroute/client_traceroute_router_interface2.png" style="width:500px;height:50px;"></kbd>
+</p>
 
-<kbd><img src="/A1/traceroute/client_traceroute_router_interface3.png" style="width:500px;height:50px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/traceroute/client_traceroute_router_interface3.png" style="width:500px;height:50px;"></kbd>
+</p>
 
 &nbsp;
 
 - Pinging from the client to any of the app servers (`192.168.2.2`, `172.64.3.10`).
 
-<kbd><img src="/A1/ping/client_ping_server1.png" style="width:400px;height:100px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/ping/client_ping_server1.png" style="width:400px;height:100px;"></kbd>
+</p>
 
-<kbd><img src="/A1/ping/client_ping_server2.png" style="width:400px;height:100px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/ping/client_ping_server2.png" style="width:400px;height:100px;"></kbd>
+</p>
 
 &nbsp;
 
 - Tracerouting from the client to any of the app servers.
 
-<kbd><img src="/A1/traceroute/client_traceroute_server1.png" style="width:500px;height:80px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/traceroute/client_traceroute_server1.png" style="width:500px;height:80px;"></kbd>
+</p>
 
-<kbd><img src="/A1/traceroute/client_traceroute_server2.png" style="width:500px;height:80px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/traceroute/client_traceroute_server2.png" style="width:500px;height:80px;"></kbd>
+</p>
 
 &nbsp;
 
 - Downloading a file using HTTP from any of the app servers.
 
-<kbd><img src="/A1/http/client_http_server1.png" style="width:400px;height:120px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/http/client_http_server1.png" style="width:400px;height:120px;"></kbd>
+</p>
 
-<kbd><img src="/A1/http/client_http_server2.png" style="width:400px;height:120px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A1/http/client_http_server2.png" style="width:400px;height:120px;"></kbd>
+</p>
 
 &nbsp;
 
@@ -175,11 +199,9 @@ You can view the detailed completion requirements of this assignment [*here*](/A
 
 In assignment 2, I simulated the bufferbloat problem through a *Mininet* topology that could make it occur. The topology for this assignment was the following:
 
-&nbsp;
-
-<kbd><img src="/A2/topology.png" style="width:600px;height:400px;" align="center" width="100%"></kbd>
-
-&nbsp;
+<p  align="center">
+    <kbd><img src="/A2/topology.png" style="width:600px;height:400px;"></kbd>
+</p>
 
 **Running the VM and SSH**
 
@@ -238,21 +260,23 @@ The following are the time-series plots of this simulation:
 
 **Download Time in Different Queue Sizes**
 
-<kbd><img src="/A2/bb-q5/download-5.png" style="width:500px;height:300px;" align="center" width="100%"></kbd>
+<p  align="center">
+    <kbd><img src="/A2/bb-q5/download-5.png" style="width:500px;height:300px;"></kbd>
+</p>
+
+<p  align="center">
+    <kbd><img src="/A2/bb-q20/download-20.png" style="width:500px;height:300px;"></kbd>
+</p>
+
+<p  align="center">
+    <kbd><img src="/A2/bb-q100/download-100.png" style="width:500px;height:300px;"></kbd>
+</p>
 
 &nbsp;
 
-<kbd><img src="/A2/bb-q20/download-20.png" style="width:500px;height:300px;" align="center" width="100%"></kbd>
-
-
-&nbsp;
-
-<kbd><img src="/A2/bb-q100/download-100.png" style="width:500px;height:300px;" align="center" width="100%"></kbd>
-
-&nbsp;
-
-As demonstrated in the pictures, The downloadTime is either below 0.5 secs or greater than 1 sec. So we can see that the buffer sizes of 100 and 5 have a varying downloadTime with a greater deviation from an average point. This phenomenon is called packet delay variation or packet jitter...
+As demonstrated in the pictures, The *downloadTime* is either below 0.5 secs or greater than 1 sec. So we can see that the buffer sizes of 100 and 5 have a varying *downloadTime* with a greater deviation from an average point. This phenomenon is called packet delay variation or packet jitter...
 
 ## Note
 
-**This note continues on my private repo. Since the assignments' starter code are the instructor's property, this repo is only a partial view of all of the assignments completed in this course. As this is a public repo, I have removed some important files and implementation details here. Please contact me to view the complete implementations. Thank you.**
+**This note continues on my private repo. Since the assignments' starter code is the instructor's property and this is a public repo, I have just provided a partial view of the completed assignments here. Please contact me to view the complete implementations on my private repo. Thank you.**
+
